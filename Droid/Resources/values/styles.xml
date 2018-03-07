@@ -14,10 +14,10 @@
         <item
             name="android:windowFullscreen">true</item>
     </style>
-    <style name="WindowAnimationStyle">
+    <!--<style name="WindowAnimationStyle">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
-    </style>
+    </style>-->
     <!-- Base theme applied no matter what API -->
     <style
         name="MyTheme.Base"
@@ -43,8 +43,8 @@
             name="android:textCursorDrawable">@null</item>
         <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
-        <item
-            name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+        <!--<item
+            name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>-->
         <item
             name="windowActionModeOverlay">true</item>
         <item
