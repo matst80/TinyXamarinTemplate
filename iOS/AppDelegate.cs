@@ -17,6 +17,7 @@ namespace defaulttemplate.iOS
             Bootstrapper.Platform = new IosBootstrapper();
             LoadApplication(new App());
 
+
             return base.FinishedLaunching(app, options);
         }
     }

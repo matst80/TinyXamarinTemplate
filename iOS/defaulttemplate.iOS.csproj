@@ -156,7 +156,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Startup\IosBootstrapper.cs" />
-    <Compile Include="Helpers\ToolbarHelper.cs" />
+    <Compile Include="Helpers\PlatformHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\defaulttemplate.Logic\defaulttemplate.Logic.csproj">

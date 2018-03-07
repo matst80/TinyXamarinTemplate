@@ -25,7 +25,7 @@ namespace defaulttemplate.Droid
 
             Bootstrapper.Platform = new DroidBootstrapper();
 
-            ToolbarHelper.Context = this;
+            PlatformHelper.Context = this;
 
             LoadApplication(new App());
         }

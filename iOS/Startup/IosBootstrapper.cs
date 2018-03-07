@@ -7,8 +7,8 @@ namespace defaulttemplate.iOS
     {
         public void Initialize(App app, ContainerBuilder builder)
         {
-            var toolbarHelper = new ToolbarHelper();
-            builder.RegisterInstance<IToolbarHelper>(toolbarHelper);
+            var toolbarHelper = new PlatformHelper();
+            builder.RegisterInstance<IPlatformHelper>(toolbarHelper);
         }
     }
 }

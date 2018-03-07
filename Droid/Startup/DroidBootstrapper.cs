@@ -8,7 +8,7 @@ namespace defaulttemplate.Droid
     {
         public void Initialize(App app, ContainerBuilder builder)
         {
-            builder.RegisterInstance<IToolbarHelper>(new ToolbarHelper());
+            builder.RegisterInstance<IPlatformHelper>(new PlatformHelper());
         }
     }
 }
