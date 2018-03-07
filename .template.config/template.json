@@ -1,0 +1,37 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Mats Törnberg",
+  "classifications": [],
+  "description": "Pre-setup Xamarin project",
+  "name": "Xamarin Project",
+  "defaultName": "XamarinProject",
+  "identity": "XamlTemplate.CSharp",
+  "groupIdentity": "XamlTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "vsmac-category": "multiplat/app/forms"
+  },
+  "shortName": "DefaultTemplate",
+  "sourceName": "defaulttemplate",
+  "guids": [
+    "{672FDC93-13CA-4B3C-A1F1-F43E9C0A9630}",
+    "{B0318209-E2C3-49AE-A452-64F28658CAF1}",
+    "{0C248386-AE5C-458E-ABCF-5072C80BA6C0}",
+    "{2128869E-FC2B-45E6-96D6-4A6ED182624E}"
+  ],
+  "primaryOutputs": [
+    {
+      "path": "Droid/defaulttemplate.Droid.csproj"
+    },
+    {
+      "path": "iOS/defaulttemplate.iOS.csproj"
+    },
+    {
+      "path": "defaulttemplate.Logic/defaulttemplate.Logic.csproj"
+    },
+    {
+      "path": "defaulttemplate/defaulttemplate.shproj"
+    }
+  ]
+}
