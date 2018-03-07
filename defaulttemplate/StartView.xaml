@@ -9,6 +9,7 @@
     x:Class="defaulttemplate.StartView">
     <Button
         Text="Welcome to Xamarin Forms!"
+        AutomationId="TestButton"
         Command="{Binding NavigateTo}"
         CommandParameter="SecondView"
         VerticalOptions="Center"

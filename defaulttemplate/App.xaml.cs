@@ -1,5 +1,8 @@
 ﻿using TinyNavigationHelper.Abstraction;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace defaulttemplate
 {
