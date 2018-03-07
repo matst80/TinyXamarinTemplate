@@ -4,6 +4,20 @@
         name="MyTheme"
         parent="MyTheme.Base">
     </style>
+    <style
+        name="MyTheme.Splash"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item
+            name="android:windowBackground">@drawable/splash_screen</item>
+        <item
+            name="android:windowNoTitle">true</item>
+        <item
+            name="android:windowFullscreen">true</item>
+    </style>
+    <style name="WindowAnimationStyle">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
     <!-- Base theme applied no matter what API -->
     <style
         name="MyTheme.Base"
@@ -25,8 +39,12 @@
          which is used to tint widgets -->
         <item
             name="colorAccent">#FF4081</item>
+        <item
+            name="android:textCursorDrawable">@null</item>
         <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
+        <item
+            name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
         <item
             name="windowActionModeOverlay">true</item>
         <item

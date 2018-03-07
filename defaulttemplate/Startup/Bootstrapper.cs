@@ -10,28 +10,38 @@ namespace defaulttemplate
 
     public static class Bootstrapper
     {
-        public static void Initialize(App app)
+        private static bool hasRunEarlyInit = false;
+
+        private static ContainerBuilder builder = new ContainerBuilder();
+
+        private static System.Reflection.Assembly mainAsm = typeof(StartView).Assembly;
+        private static System.Reflection.Assembly logicAsm = typeof(ViewModels.StartViewModel).Assembly;
+
+        public static void EarlyInitialize()
         {
-            var builder = new ContainerBuilder();
-
-            var asm = app.GetType().Assembly;
-            var vmAsm = typeof(ViewModels.StartViewModel).Assembly;
-
+            
             // Views
-            builder.RegisterAssemblyTypes(asm)
+            builder.RegisterAssemblyTypes(mainAsm)
                    .Where(x => x.Name.EndsWith("View", StringComparison.Ordinal));
 
             // ViewModels
-            builder.RegisterAssemblyTypes(vmAsm)
+            builder.RegisterAssemblyTypes(logicAsm)
                    .Where(x => x.Name.EndsWith("ViewModel", StringComparison.Ordinal));
 
             // Services
-            builder.RegisterAssemblyTypes(vmAsm)
+            builder.RegisterAssemblyTypes(logicAsm)
                    .Where(x => x.Name.EndsWith("Service", StringComparison.Ordinal)).SingleInstance();
+            hasRunEarlyInit = true;
+        }
+
+        public static void Initialize(App app)
+        {
+            if (!hasRunEarlyInit)
+                EarlyInitialize();
 
             // Navigation
             var navigationHelper = new TinyNavigationHelper.Forms.FormsNavigationHelper(app);
-            navigationHelper.RegisterViewsInAssembly(asm);
+            navigationHelper.RegisterViewsInAssembly(mainAsm);
             builder.RegisterInstance<INavigationHelper>(navigationHelper);
 
             // Platform specifics
