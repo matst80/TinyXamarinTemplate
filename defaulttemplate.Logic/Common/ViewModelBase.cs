@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace defaulttemplate.Logic
 {
+    [PropertyChanged.AddINotifyPropertyChangedInterface]
     public class ViewModelBase : TinyMvvm.ViewModelBase
     {
         protected bool SetPropertyValue<T>(ref T field, T value, [CallerMemberName] string propertyName = null)

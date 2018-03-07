@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using TinyMvvm.IoC;
 
 namespace defaulttemplate.Droid
 {
@@ -23,6 +24,9 @@ namespace defaulttemplate.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             Bootstrapper.Platform = new DroidBootstrapper();
+
+            ToolbarHelper.Context = this;
+
             LoadApplication(new App());
         }
     }

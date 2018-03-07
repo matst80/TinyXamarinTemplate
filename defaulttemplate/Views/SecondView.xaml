@@ -5,6 +5,7 @@
     xmlns:viewmodels="clr-namespace:defaulttemplate.ViewModels;assembly=defaulttemplate.Logic"
     xmlns:local="clr-namespace:defaulttemplate"
     x:TypeArguments="viewmodels:SecondViewModel"
+    Title="Second view"
     x:Class="defaulttemplate.Views.SecondView">
     <Label
         Text="Welcome to another view!"

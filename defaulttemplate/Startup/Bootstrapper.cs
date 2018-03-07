@@ -34,6 +34,9 @@ namespace defaulttemplate
             navigationHelper.RegisterViewsInAssembly(asm);
             builder.RegisterInstance<INavigationHelper>(navigationHelper);
 
+            // Platform specifics
+            Platform?.Initialize(app, builder);
+
             // Build and set
             var container = builder.Build();
             var resolver = new AutofacResolver(container);
@@ -50,8 +53,7 @@ namespace defaulttemplate
             TinyCache.TinyCache.SetCacheStore(new XamarinPropertyStorage());
             TinyCache.TinyCache.SetBasePolicy(cacheFirstPolicy);
 
-            // Platform specifics
-            Platform?.Initialize(app, builder);
+
         }
 
         public static IBootstrapper Platform { get; set; }

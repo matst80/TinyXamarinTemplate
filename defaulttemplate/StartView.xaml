@@ -5,6 +5,7 @@
     xmlns:viewmodels="clr-namespace:defaulttemplate.ViewModels;assembly=defaulttemplate.Logic"
     xmlns:local="clr-namespace:defaulttemplate"
     x:TypeArguments="viewmodels:StartViewModel"
+    Title="Welcome"
     x:Class="defaulttemplate.StartView">
     <Button
         Text="Welcome to Xamarin Forms!"

@@ -9,8 +9,10 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Common\" />
     <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="TinyMvvm" Version="0.1.46" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.2.9" />
   </ItemGroup>
 </Project>
