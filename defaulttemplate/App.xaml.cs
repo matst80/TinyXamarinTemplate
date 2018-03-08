@@ -16,7 +16,9 @@ namespace defaulttemplate
 
             Bootstrapper.Initialize(this);
 
+            // Make keyboard take space in the view on android
             Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize | WindowSoftInputModeAdjust.Pan);
+
             SetupErrorHandling();
 
             NavigationHelper.Current.SetRootView("StartView", true);
@@ -24,7 +26,7 @@ namespace defaulttemplate
 
         private void SetupErrorHandling()
         {
-            ErrorHandler.AddHandler(new InsightsErrorHandler());
+            
 #if DEBUG
             ErrorHandler.AddHandler(new DebugErrorHandler((msg) =>
             {
@@ -33,6 +35,8 @@ namespace defaulttemplate
                 });
             }));
 #endif
+            ErrorHandler.AddHandler(new InsightsErrorHandler());
+
             TaskScheduler.UnobservedTaskException += (sender, ex) =>
             {
                 if (ErrorHandler.HandleSilent(ex.Exception.InnerException??ex.Exception))
