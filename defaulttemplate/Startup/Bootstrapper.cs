@@ -1,6 +1,6 @@
 ﻿using System;
 using Autofac;
-using TinyCache;
+using TinyCacheLib;
 using TinyMvvm.Autofac;
 using TinyMvvm.IoC;
 using TinyNavigationHelper;
@@ -60,8 +60,8 @@ namespace defaulttemplate
 
             // Init TinyCache
             var cacheFirstPolicy = new TinyCachePolicy().SetMode(TinyCacheModeEnum.CacheFirst).SetFetchTimeout(Settings.Current.FetchTimeout);
-            TinyCache.TinyCache.SetCacheStore(new XamarinPropertyStorage());
-            TinyCache.TinyCache.SetBasePolicy(cacheFirstPolicy);
+            TinyCache.SetCacheStore(new XamarinPropertyStorage());
+            TinyCache.SetBasePolicy(cacheFirstPolicy);
 
 
         }

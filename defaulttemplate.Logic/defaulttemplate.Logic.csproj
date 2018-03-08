@@ -12,7 +12,7 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="TinyMvvm" Version="0.1.46" />
     <PackageReference Include="PropertyChanged.Fody" Version="2.2.9" />
+    <PackageReference Include="TinyMvvm" Version="0.1.47" />
   </ItemGroup>
 </Project>

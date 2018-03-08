@@ -28,6 +28,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ErrorHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringNotEmptyConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
