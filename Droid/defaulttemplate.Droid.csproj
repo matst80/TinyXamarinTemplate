@@ -144,6 +144,9 @@
     <Reference Include="PropertyChanged">
       <HintPath>..\packages\PropertyChanged.Fody.2.2.9\lib\netstandard1.0\PropertyChanged.dll</HintPath>
     </Reference>
+    <Reference Include="TinyInsights">
+      <HintPath>..\packages\TinyInsights.1.0.23\lib\netstandard2.0\TinyInsights.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

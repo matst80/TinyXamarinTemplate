@@ -27,6 +27,7 @@
       <DependentUpon>SecondView.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ErrorHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
